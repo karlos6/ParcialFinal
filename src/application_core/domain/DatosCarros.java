@@ -14,5 +14,15 @@ public class DatosCarros {
     public List<Carro> consultarCarros(){
         return carros;
     }
+
+    public Carro buscarCarro(String placa){
+        for (Carro car : carros){
+            if (placa.equals(car.getPlaca())){
+                return car;
+            }
+        }
+        System.out.println("El carro no fue encontrado");
+        return null;
+    }
     
 }
